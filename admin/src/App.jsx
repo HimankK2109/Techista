@@ -13,7 +13,7 @@ import ListMobiles from "./components/ListMobiles/ListMobiles";
 import MobileShowdown from "./components/MobileShowdown/MobileShowdown";
 
 function App() {
-  const url = "http://localhost:4000";
+  const url = "https://techista-backend.onrender.com";
 
   return (
     <>

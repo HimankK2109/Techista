@@ -1,0 +1,90 @@
+/* Base Styles */
+.deals-container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.deal-box {
+    text-align: center;
+    padding: 3rem;
+    padding-bottom: 4rem;
+}
+
+.deal-box h2 {
+    font-family: "Concert One", sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 0px 20px 40px 20px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    outline: none;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.displayer {
+    margin-left: 5rem;
+    margin-right: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .deal-box h2 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .displayer {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 250px;
+    }
+}
+
+/* Small Screens (Large Phones) */
+@media (max-width: 768px) {
+    .deal-box {
+        padding: 2rem;
+    }
+
+    .deal-box h2 {
+        font-size: 30px;
+        line-height: 45px;
+        padding: 0px 10px 30px 10px;
+    }
+
+    .displayer {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        height: 220px;
+    }
+}
+
+/* Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+    .deal-box h2 {
+        font-size: 24px;
+        line-height: 40px;
+        padding: 0px 5px 20px 5px;
+    }
+
+    .displayer {
+        margin: 0;
+        padding: 0;
+        height: 200px;
+    }
+}

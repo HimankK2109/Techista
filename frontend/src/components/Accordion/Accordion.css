@@ -1,0 +1,22 @@
+.accordion-container {
+  width: 200px;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  background-color: #54089c;
+  padding: 2.5px;
+  border: 1px solid #ddd;
+  text-align: left;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.accordion-content {
+  padding: 5px;
+  padding-bottom: 0px;
+  background-color: #1b1212;
+  margin-left: 20px;
+  transition: 0.3s;
+  animation: fadeIn 0.8s;
+}

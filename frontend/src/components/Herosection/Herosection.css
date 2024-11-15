@@ -1,0 +1,328 @@
+.herosec {
+  position: relative;
+  width: 100%;
+  padding-bottom: 10rem;
+  height: 100vh-1rem;
+}
+
+.item-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 0px;
+}
+
+.left-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  margin-left: 80px;
+  margin-bottom: 61px;
+  margin-top: 55px;
+}
+
+.left-part h1 {
+  font-weight: 500;
+  font-size: 3.8rem;
+  line-height: 4rem;
+  text-align: left;
+}
+
+.left-part p {
+  color: rgb(140, 139, 139);
+  font-size: 0.9rem;
+  padding-top: 45px;
+}
+
+.dot {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 61%;
+  top: 13%;
+  z-index: -1;
+  background: linear-gradient(
+    97.05deg,
+    #4066ff 3.76%,
+    #ffb978 0%
+  );
+}
+
+.right-part {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  margin: 5rem;
+  width: 25vw;
+  height: 48vh;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+/* Mobile-specific styles here */
+@media (min-width: 320px) and (max-width: 480px) {
+  .item-box {
+    flex-direction: column;
+    max-width: 85vw;
+    padding: 5px;
+  }
+
+  .left-part {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  .left-part h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+
+  .left-part p {
+    font-size: 1rem;
+  }
+
+  .dot {
+    display: none;
+    height: 3rem;
+    width: 3rem;
+    right: 55%;
+    top: 10.5%;
+  }
+
+  .right-part {
+    width: 100%;
+  }
+
+  .slider {
+    width: 80vw;
+    height: 33vh;
+    margin: 1rem;
+  }
+}
+
+/* For small tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .item-box {
+    flex-direction: column;
+    max-width: 85vw;
+    padding: 10px;
+  }
+
+  .left-part {
+    width: 50%;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .left-part h1 {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+
+  .left-part p {
+    font-size: 1rem;
+  }
+
+  .dot {
+    display: n;
+    height: 3rem;
+    width: 3rem;
+    right: 55%;
+    top: 10.5%;
+  }
+
+  .right-part {
+    width: 50%;
+  }
+
+  .slider {
+    width: 40vw;
+    height: 25vh;
+    margin: 1rem;
+  }
+}
+
+/* includes iPad mini */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .item-box {
+    flex-direction: row;
+    max-width: 85vw;
+    padding: 10px;
+  }
+
+  .left-part {
+    width: 50%;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .left-part h1 {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+
+  .left-part p {
+    font-size: 1rem;
+  }
+
+  .dot {
+    height: 3rem;
+    width: 3rem;
+    right: 63%;
+    top: 9%;
+  }
+
+  .right-part {
+    width: 50%;
+  }
+
+  .slider {
+    width: 40vw;
+    height: 25vh;
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .item-box {
+    flex-direction: row;
+    max-width: 85vw;
+    padding: 10px;
+  }
+
+  .left-part {
+    width: 50%;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .left-part h1 {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+
+  .left-part p {
+    font-size: 1rem;
+  }
+
+  .dot {
+    height: 3rem;
+    width: 3rem;
+    right: 63%;
+    top: 9%;
+  }
+
+  .right-part {
+    width: 50%;
+  }
+
+  .slider {
+    width: 40vw;
+    height: 25vh;
+    margin: 1rem;
+  }
+}
+
+/* iPad Air-specific adjustments (820px - 834px wide) */
+@media (min-width: 820px) and (max-width: 834px) {
+  .item-box {
+    flex-direction: row;
+    max-width: 85vw;
+    padding: 10px;
+  }
+
+  .left-part {
+    width: 50%;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .left-part h1 {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+
+  .left-part p {
+    font-size: 1rem;
+  }
+
+  .dot {
+    height: 3rem;
+    width: 3rem;
+    right: 55%;
+    top: 9%;
+  }
+
+  .right-part {
+    width: 50%;
+  }
+
+  .slider {
+    width: 40vw;
+    height: 25vh;
+    margin: 1rem;
+  }
+}
+
+/* iPad Mini-specific adjustments (768px wide)
+@media (max-width: 768px) {
+  .item-box {
+    flex-direction: row;
+    max-width: 85vw;
+    padding: 10px;
+  }
+
+  .left-part {
+    width: 50%;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .left-part h1 {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+
+  .left-part p {
+    font-size: 1rem;
+  }
+
+  .dot {
+    height: 3rem;
+    width: 3rem;
+    right: 55%;
+    top: 10.5%;
+  }
+
+  .right-part {
+    width: 50%;
+  }
+
+  .slider {
+    width: 40vw;
+    height: 25vh;
+    margin: 1rem;
+  }
+} */

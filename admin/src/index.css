@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark;
+    font-family: "Poppins", sans-serif;   
+}   
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+  
+body{
+    min-height: 100vh;
+}
+  
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #a9a9a9;
+}
+  
+body::before {
+    /* White Gradient */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16rem; /* Adjust size as needed */
+    height: 16rem; /* Adjust size as needed */
+    background: rgba(255, 255, 255, 0.522); /* Semi-transparent white */
+    filter: blur(100px); /* Adjust blur as needed */
+    border-radius: 50%; /* Makes the shape a circle */
+    z-index: -1; /* Place the gradient behind the body content */
+}

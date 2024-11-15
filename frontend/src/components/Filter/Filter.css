@@ -1,0 +1,171 @@
+/* General styles for desktop and larger screens */
+.filter-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .brand-selection-container {
+    width: 70vw;
+    height: 75%;
+    padding: 1.5rem;
+  }
+  
+  .inside-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .written {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    grid-column: span 2;
+  }
+  
+  .brandlogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .brandlogos img {
+    object-fit: fill;
+    border-radius: 50%;
+    height: 11rem;
+    width: 11rem;
+    transition: transform 300ms ease-in-out;
+  }
+  
+  .brandlogos img:hover {
+    transform: scale(1.1);
+  }
+  
+  .glow-effect img {
+    box-shadow: 0 0 20px 5px rgba(255, 105, 180, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .text-area {
+    font-family: "Concert One", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #0e3742;
+    padding: 20px;
+    line-height: 60px;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+    animation: animate 5s infinite alternate;
+  }
+  
+  @keyframes animate {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+      color: #36454f;
+      text-shadow: none;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+      color: #fff;
+      text-shadow: 0 0 10px #708090, 0 0 20px #708090, 0 0 40px #708090,
+        0 0 80px #708090, 0 0 160px #708090;
+    }
+  }
+  
+  /* Small mobile devices (320px - 480px) */
+  @media (min-width: 320px) and (max-width: 480px) {
+    .brand-selection-container {
+      width: 90vw;
+      padding: 1rem;
+    }
+  
+    .inside-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .brandlogos img {
+      height: 8rem;
+      width: 8rem;
+    }
+  
+    .text-area {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      text-align: center;
+    }
+  }
+  
+  /* Medium devices (481px - 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .brand-selection-container {
+      width: 80vw;
+      padding: 1rem;
+    }
+  
+    .inside-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .brandlogos img {
+      height: 9rem;
+      width: 9rem;
+    }
+  
+    .text-area {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+  
+  /* Tablets and small desktops (769px - 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .brand-selection-container {
+      width: 70vw;
+    }
+  
+    .inside-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .brandlogos img {
+      height: 10rem;
+      width: 10rem;
+    }
+  
+    .text-area {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+  
+  /* Larger screens (1025px and above) */
+  @media (min-width: 1025px) {
+    .brand-selection-container {
+      width: 60vw;
+    }
+  
+    .inside-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .brandlogos img {
+      height: 11rem;
+      width: 11rem;
+    }
+  
+    .text-area {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  }  

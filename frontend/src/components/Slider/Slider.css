@@ -1,0 +1,29 @@
+/* Ensure the swiper container has relative positioning */
+.swiper_container {
+  position: relative;
+}
+
+/* Style for the pagination bullets */
+.swiper-pagination {
+  position: absolute;
+  bottom: 0; /* Aligns the dots to the bottom */
+  left: 50%; /* Centers the dots horizontally */
+  transform: translateX(-50%); /* Adjusts horizontal centering */
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* Space between pagination dots */
+  padding-bottom: 1rem; /* Add padding from the bottom if needed */
+}
+
+/* Style for the individual pagination bullets */
+.swiper-pagination-bullet {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #fff; /* Change color as needed */
+  opacity: 0.7; /* Change opacity as needed */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000; /* Change to active dot color */
+  opacity: 1; /* Change opacity for active dot */
+}

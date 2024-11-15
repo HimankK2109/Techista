@@ -1,0 +1,134 @@
+/* Footer Styles */
+.foot {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Section Styles (About Us, Categories, Contact Us, etc.) */
+.top-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+}
+
+/* Responsive (content box) */
+.dabba {
+    width: 100%;
+    max-width: 400px; /* Prevents overly wide content */
+}
+
+.dabba h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    padding-bottom: 0.75rem;
+}
+
+/* Bottom Section (Credits & Copyright) */
+.bottom-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.credits p, .copyright-box p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 5rem;
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
+.foot hr {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0px;
+    background-color: grey;
+    border: none;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .dabba {
+        width: 100%;
+        max-width: 300px; /* Ensures smaller width on tablets */
+    }
+
+    .dabba h2 {
+        font-size: 1.75rem;
+    }
+
+    .credits p,
+    .copyright-box p {
+        font-size: 1.25rem;
+    }
+}
+
+/* Small Screens (Phones/Tablets) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .dabba {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .dabba h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .credits p,
+    .copyright-box p {
+        font-size: 1rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+    .dabba {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .dabba h2 {
+        font-size: 1.25rem;
+    }
+
+    .credits p,
+    .copyright-box p {
+        font-size: 0.9rem;
+        padding-bottom: 2rem;
+    }
+}

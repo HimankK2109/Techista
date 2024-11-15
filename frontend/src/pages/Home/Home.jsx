@@ -4,6 +4,7 @@ import HowItWorks from '../../components/HowitWorks/HowItWorks'
 import Discover from '../../components/Discover/Discover'
 import Filter from '../../components/Filter/Filter'
 import Deals from '../../components/Deals/Deals'
+import GoogleForm from '../../components/GoogleForm/GoogleForm'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Discover />
       <Filter />
       <Deals />
+      <GoogleForm />
     </div>
   )
 }

@@ -9,7 +9,7 @@ const StoreContextProvider = (props) => {
     const [showModal, setShowModal] = useState(false);   
     const [token, setToken] = useState("");
     const [product_priceinfo, setProductPriceInfo] = useState([]) // product_priceinfo
-    const url = "http://localhost:4000"
+    const url = "https://techista-backend.onrender.com"
 
     // ***********************************************FOR LAPTOP*********************************************************************************
     const [selectedLaptopCompare, setSelectedLaptopCompare] = useState([]);

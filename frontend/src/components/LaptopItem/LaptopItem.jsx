@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { assets } from '../../assets/assests.js'
 import { StoreContext } from '../../context/StoreContext.jsx'
+import { toast } from "react-toastify";
 import './LaptopItem.css'
 
 const LaptopItem = ({id,serialNumber,name,price,description,image}) => {
@@ -44,7 +45,8 @@ const LaptopItem = ({id,serialNumber,name,price,description,image}) => {
                         // console.log(serialNumber)
                         e.stopPropagation(); // Prevent modal from opening
                         if (!token) {
-                            alert("Please login to add to wishlist");
+                            toast.error('Please login to add to wishlist');
+                            // alert("Please login to add to wishlist");
                             return;
                         }
                         markItem(serialNumber);

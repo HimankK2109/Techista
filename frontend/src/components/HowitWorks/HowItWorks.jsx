@@ -1,7 +1,7 @@
 import React from 'react';
 import { assets } from '../../assets/assests.js'
 import hiw from '../../assets/hiw.png';
-import './HowitWorks.css'
+import './HowItWorks.css'
 
 function HowItWorks() {
   return (

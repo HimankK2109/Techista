@@ -44,11 +44,11 @@ const ContactUs = () => {
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        'service_xlyunwf',
+        'template_koz91we',
         form.current,
         {
-          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+          publicKey: 'iWl6NyKxLD2sL3_SY',
         }
       )
       .then(
@@ -115,7 +115,7 @@ const ContactUs = () => {
               <div className="mb-4 flex justify-center">
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey={import.meta.env.VITE_APP_RECAPTCHA_SITE_KEY}
+                  sitekey='6LfKEXUqAAAAANZm9kojXA7sJB8vjQsc3P61_5sn'
                   onChange={handleCaptchaChange}
                 />
               </div>

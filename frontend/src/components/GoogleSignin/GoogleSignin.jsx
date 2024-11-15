@@ -10,7 +10,7 @@ const GoogleSignin = () => {
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
-      client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID, // Replace with your actual Google client ID
+      client_id: '204750464417-n9d1q3ia40q9dcr7vckvnul91jk4ilsa.apps.googleusercontent.com', // Replace with your actual Google client ID
       callback: handleCredentialResponse,
     });
 

@@ -1,8 +1,8 @@
 # Use a base image with the browser (Chromium, for example)
 ARG PORT=443
-FROM cypress/browser:latest
+FROM selenium/standalone-chrome:latest
 
-# Install Python3 and pip
+# Install Python3 and pip, wget, gnupg, curl, and unzip
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     && apt-get clean
 
-# Install Google Chrome
+# Install Google Chrome (Stable version)
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - && \
     echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list && \
     apt-get update && apt-get install -y google-chrome-stable
@@ -22,17 +22,18 @@ RUN wget -O /usr/bin/chromedriver https://chromedriver.storage.googleapis.com/$(
     unzip /usr/bin/chromedriver -d /usr/bin && \
     chmod +x /usr/bin/chromedriver
 
-# Copy the requirements.txt file
-COPY requirements.txt .
+# Set up environment variable for PATH (to locate Chrome and Chromedriver)
+ENV PATH="/home/root/.local/bin:/usr/bin/chromedriver:${PATH}"
 
-# Install Python dependencies
-RUN pip install -r requirements.txt
+# Copy the requirements.txt file and install Python dependencies
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all files into the container
+# Copy the rest of the application files
 COPY . .
 
-# Set up environment variable for PATH (to locate Chrome and Chromedriver)
-ENV PATH="/home/root/.local/bin:${PATH}"
+# Expose port (if needed for web server, otherwise you can skip this)
+EXPOSE 8000
 
-# Start the script
-CMD python scraper/main.py
+# Set the command to run your main script
+CMD ["python3", "scraper/main.py"]

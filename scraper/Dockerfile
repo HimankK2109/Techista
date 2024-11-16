@@ -3,7 +3,7 @@ ARG PORT=443
 FROM selenium/standalone-chrome:latest
 
 # Install Python3 and pip, wget, gnupg, curl, and unzip
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y sudo \
     python3 \
     python3-pip \
     wget \

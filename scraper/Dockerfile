@@ -18,21 +18,22 @@ RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add
     apt-get update && apt-get install -y google-chrome-stable
 
 # Install Chromedriver
-RUN wget -O /usr/bin/chromedriver https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip && \
-    unzip /usr/bin/chromedriver -d /usr/bin && \
-    chmod +x /usr/bin/chromedriver
+RUN wget -O /usr/bin/chromedriver.zip https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip && \
+    unzip /usr/bin/chromedriver.zip -d /usr/bin && \
+    chmod +x /usr/bin/chromedriver && \
+    rm /usr/bin/chromedriver.zip
 
 # Set up environment variable for PATH (to locate Chrome and Chromedriver)
 ENV PATH="/home/root/.local/bin:/usr/bin/chromedriver:${PATH}"
 
 # Copy the requirements.txt file and install Python dependencies
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application files
-COPY . .
+COPY . ./
 
-# Expose port (if needed for web server, otherwise you can skip this)
+# Expose port (optional, useful if it's a web service)
 EXPOSE 8000
 
 # Set the command to run your main script

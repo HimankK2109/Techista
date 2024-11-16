@@ -78,7 +78,7 @@ const LaptopDoc = () => {
 
       
       {/* CPU Accordion */}
-      <div className='p-4 mt-10' ref={accordionRefs[0]}>
+      <div className='px-0 py-4 sm:p-4 mt-10' ref={accordionRefs[0]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(0)}
@@ -113,7 +113,7 @@ const LaptopDoc = () => {
           >
             
             <div className='overflow-hidden'>
-              <div className='p-4'>
+              <div className='px-0 sm:p-4'>
                 <h2 className='text-2xl text-[#F3C623]'>Understanding Laptop CPUs: The Basics to Make an Informed Choice</h2>
 
                 <h3 className='text-[#D4BEE4] text-xl mt-4'>1. What is a CPU?</h3>
@@ -236,7 +236,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* GPU Accordion */}
-      <div className='p-4' ref={accordionRefs[1]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[1]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(1)}
@@ -271,7 +271,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                   <h2 className='text-2xl text-[#F3C623]'>Understanding Laptop GPUs: A Comprehensive Guide</h2>
 
                   <h3 className='text-xl text-[#D4BEE4] mt-4'>1. What is a GPU?</h3>
@@ -351,7 +351,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* RAM Accordion */}
-      <div className='p-4' ref={accordionRefs[2]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[2]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(2)}
@@ -386,7 +386,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                   <h2 className='text-2xl text-[#F3C623]'>RAM Guide: Everything You Need to Know</h2>
 
                   <h3 className='text-xl text-[#D4BEE4] mt-4'>1. What is RAM?</h3>
@@ -476,7 +476,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Storage Accordion */}
-      <div className='p-4' ref={accordionRefs[3]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[3]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(3)}
@@ -511,7 +511,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                   <h2 className='text-2xl text-[#F3C623]'>Understanding Storage: From Basics to Buying Choices</h2>
 
                   <h3 className='text-xl text-[#D4BEE4] mt-4'>1. What is Storage?</h3>
@@ -526,13 +526,13 @@ const LaptopDoc = () => {
                   </p>
                   <ul className="list-disc text-base pl-14 text-white">
                     <li>Pros:
-                      <ul className="list-disc text-base pl-14 text-white">
+                      <ul className="list-disc text-base sm:pl-14 pl-5 text-white">
                         <li>Larger storage capacities (up to several terabytes).</li>
                         <li>Cost-effective, providing more storage for less money.</li>
                       </ul>
                     </li>
                     <li>Cons:
-                      <ul className="list-disc text-base pl-14 text-white">
+                      <ul className="list-disc text-base sm:pl-14 pl-5 text-white">
                         <li>Slower read/write speeds compared to SSDs, leading to longer boot times and slower file transfers.</li>
                         <li>More prone to physical damage due to moving parts.</li>
                       </ul>
@@ -546,14 +546,14 @@ const LaptopDoc = () => {
                   </p>
                   <ul className="list-disc text-base pl-14 text-white">
                     <li>Pros:
-                      <ul className="list-disc text-base pl-14">
+                      <ul className="list-disc text-base sm:pl-14 pl-5">
                         <li>Very fast read/write speeds (up to 5 times faster than HDDs), leading to quick boot times and rapid file access.</li>
                         <li>More durable, as there are no moving parts.</li>
                         <li>Less power consumption, leading to longer battery life in laptops.</li>
                       </ul>
                     </li>
                     <li>Cons:
-                      <ul className="list-disc text-base pl-14 text-white">
+                      <ul className="list-disc text-base sm:pl-14 pl-5 text-white">
                         <li>Higher cost per gigabyte compared to HDDs.</li>
                         <li>Limited storage capacity options (although this is improving).</li>
                       </ul>
@@ -577,14 +577,14 @@ const LaptopDoc = () => {
                   <ul className="list-disc text-base pl-14 text-white">
                     <li>
                       <strong>Gen 3 NVMe SSDs</strong>:
-                      <ul className="list-disc text-base pl-14">
+                      <ul className="list-disc text-base sm:pl-14 pl-5">
                         <li>Speed: Typically offers speeds up to <strong className='text-[#D4BEE4]'>3,500 MB/s</strong>.</li>
                         <li>Compatibility: Most laptops with NVMe slots can support these drives.</li>
                       </ul>
                     </li>
                     <li>
                       <strong className='text-[#D4BEE4]'>Gen 4 NVMe SSDs</strong>:
-                      <ul className="list-disc text-base pl-14 text-white">
+                      <ul className="list-disc text-base sm:pl-14 pl-5 text-white">
                         <li>Speed: Can achieve speeds over <strong className='text-[#D4BEE4]'>7,000 MB/s</strong>, significantly improving performance.</li>
                         <li>Compatibility: Requires a compatible motherboard (PCIe 4.0). Generally found in newer laptops and high-end models.</li>
                       </ul>
@@ -627,7 +627,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Displays Accordion */}
-      <div className='p-4' ref={accordionRefs[4]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[4]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(4)}
@@ -662,7 +662,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                 <h2 className="text-[#F3C623] text-2xl">Understanding Laptop Displays</h2>
                     <p className="text-white text-base pl-5">
                         Choosing the right display is crucial when buying a laptop, as it directly impacts your viewing experience for work, gaming, and multimedia consumption. Here’s what you need to know:
@@ -768,7 +768,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Batteries Accordion */}
-      <div className='p-4' ref={accordionRefs[5]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[5]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(5)}
@@ -803,7 +803,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                 <h2 className="text-[#F3C623] text-2xl">Understanding Laptop Batteries: A Comprehensive Guide</h2>
                     <h3 className="text-[#D4BEE4] text-xl mt-4">1. What is a Laptop Battery?</h3>
                     <p className="text-white text-base pl-5">
@@ -896,7 +896,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Connectivty Accordion */}
-      <div className='p-4' ref={accordionRefs[6]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[6]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(6)}
@@ -931,7 +931,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                 <h2 className="text-[#F3C623] text-2xl">Laptop Connectivity: What to Look For</h2>
                     
                     <h3 className="text-[#D4BEE4] text-xl mt-4">1. USB Ports: The Basics</h3>
@@ -1019,7 +1019,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Dolby Accordion */}
-      <div className='p-4' ref={accordionRefs[7]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[7]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(7)}
@@ -1054,7 +1054,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                   <h2 className="text-[#F3C623] text-2xl font-bold">What is Dolby?</h2>
                     <p className="text-white text-base pl-5">
                         Dolby is a brand known for enhancing audio quality in various devices, including laptops. Dolby technologies aim to deliver immersive, cinema-like sound experiences.
@@ -1115,7 +1115,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Games Accordion */}
-      <div className='p-4' ref={accordionRefs[8]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[8]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(8)}
@@ -1150,7 +1150,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                   <h2 className="text-[#F3C623] text-2xl">Understanding Gaming Performance: Key Concepts</h2>
 
                   <h3 className="text-[#D4BEE4] text-xl mt-4">FPS (Frames Per Second)</h3>
@@ -1228,7 +1228,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Keyboard Accordion */}
-      <div className='p-4' ref={accordionRefs[9]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[9]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(9)}
@@ -1263,7 +1263,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                   <h2 className="text-[#F3C623] text-2xl">Keyboard Types & Sizes: What to Look For</h2>
 
                   <h3 className="text-[#D4BEE4] text-xl mt-4">1. Full-Size Keyboard</h3>
@@ -1352,7 +1352,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Benchmarks Accordion */}
-      <div className='p-4' ref={accordionRefs[10]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[10]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(10)}
@@ -1387,7 +1387,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                   <h2 className="text-2xl text-[#F3C623]">Understanding Laptop Benchmarks</h2>
                   <p className="text-base pl-5 text-white">
                     Benchmarks are standardized tests used to measure the performance of hardware components in laptops. They provide valuable insights into how a laptop will perform in real-world tasks, whether it's gaming, productivity, or creative work. By understanding these benchmarks, you can make a more informed choice when purchasing a laptop.
@@ -1494,7 +1494,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Used For Accordion */}
-      <div className='p-4' ref={accordionRefs[11]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[11]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(11)}
@@ -1529,7 +1529,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                 <h2 className="text-2xl text-[#F3C623]">Used For: Choosing the Right Laptop for Your Needs</h2>
                     <p className="text-base pl-5 text-white">
                         When selecting a laptop, it’s essential to consider your primary usage. Below, we detail various common use cases, including recommended specifications to help you make an informed decision.
@@ -1642,7 +1642,7 @@ const LaptopDoc = () => {
       </div>
 
       {/* Rest Specifications Accordion */}
-      <div className='p-4' ref={accordionRefs[12]}>
+      <div className='px-0 py-4 sm:p-4' ref={accordionRefs[12]}>
         <div className='py-2'>
           <button
               onClick={() => toggleAccordion(12)}
@@ -1677,7 +1677,7 @@ const LaptopDoc = () => {
           >
             
               <div className='overflow-hidden'>
-                <div className='p-4'>
+                <div className='px-0 sm:p-4'>
                 <h2 className="text-2xl text-[#F3C623]">1. Power Adapters</h2>
                     <p className="text-base pl-5 text-white">
                         A power adapter converts electrical power from a wall outlet into a form that your laptop can use. It ensures that your laptop runs smoothly and efficiently, charging the battery as needed.
@@ -1688,7 +1688,7 @@ const LaptopDoc = () => {
                     <ul className="list-disc text-base pl-14 text-white">
                         <li>
                             <strong className="text-[#AB886D]">Wattage</strong>: The wattage of the adapter (measured in watts, W) indicates how much power it can deliver. Most laptops come with a specific wattage adapter, which is crucial for optimal performance. Using a lower wattage adapter can result in slow charging or insufficient power for high-performance tasks.
-                            <ul className="list-disc text-base pl-14 text-white">
+                            <ul className="list-disc text-base sm:pl-14 pl-5 text-white">
                                 <li><strong className="text-[#D4BEE4]">Typical Wattages:</strong></li>
                                 <li><strong className="text-[#D4BEE4]">45W</strong>: Suitable for ultrabooks and light laptops.</li>
                                 <li><strong className="text-[#D4BEE4]">65W - 90W</strong>: Common for standard laptops and moderate gaming laptops.</li>
@@ -1716,14 +1716,14 @@ const LaptopDoc = () => {
                     <ul className="list-disc text-base pl-14 text-white">
                         <li>
                             <strong className="text-[#AB886D]">Integrated vs. Dedicated Graphics</strong>:
-                            <ul className="list-disc text-base pl-14 text-white">
+                            <ul className="list-disc text-base sm:pl-14 pl-5 text-white">
                                 <li><strong className="text-[#D4BEE4]">Integrated Graphics</strong>: These are built into the CPU and are sufficient for everyday tasks, like web browsing and office applications.</li>
                                 <li><strong className="text-[#D4BEE4]">Dedicated Graphics</strong>: These provide better performance for gaming, video editing, and other graphics-intensive tasks.</li>
                             </ul>
                         </li>
                         <li>
                             <strong className="text-[#AB886D]">Benefits of a Mux Switch</strong>:
-                            <ul className="list-disc text-base pl-14 text-white">
+                            <ul className="list-disc text-base sm:pl-14 pl-5 text-white">
                                 <li><strong className="text-[#D4BEE4]">Performance Optimization</strong>: When running demanding applications, switching to dedicated graphics can significantly enhance performance.</li>
                                 <li><strong className="text-[#D4BEE4]">Power Efficiency</strong>: For general tasks, integrated graphics can save battery life.</li>
                                 <li><strong className="text-[#D4BEE4]">User Control</strong>: Some laptops allow users to toggle between graphics modes based on their needs.</li>

@@ -2,15 +2,17 @@
 ARG PORT=443
 FROM selenium/standalone-chrome:latest
 
-# Install Python3 and pip, wget, gnupg, curl, and unzip
-RUN apt-get update && apt-get install -y sudo \
+# Update package lists and install sudo and other dependencies
+RUN apt-get update && apt-get install -y \
+    sudo \
     python3 \
     python3-pip \
     wget \
     gnupg \
     curl \
     unzip \
-    && apt-get clean
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install Google Chrome (Stable version)
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - && \

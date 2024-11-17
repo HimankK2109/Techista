@@ -291,7 +291,7 @@ for product in products:
     # Increment request count and wait 20 seconds before the next request
     request_count += 1
     if request_count < max_requests:
-        time.sleep(20)
+        time.sleep(10)
 
 # Close the driver
 driver.quit()

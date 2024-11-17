@@ -273,10 +273,12 @@ const StoreContextProvider = (props) => {
 
     // Function for wishlisting an item
     const markItem = async (serialNumber) => {
+        // we load current user wishlist by loadWishlistData function and put it in this state variable for frontend rendering
+        // and now if user wishlist something new then we set it true in frontned to render and then we also change in backend
         if(!wishlistItems[serialNumber]){
             setWishlistItems((prev) => ({...prev,[serialNumber]:true}))
         }
-        if(token){ //mtlb logged in h ham
+        if(token){ //mtlb logged in h ham and we change the wishlist of user in userModel
             await axios.post(url+"/api/wishlist/add",{serialNumber},{headers:{token}})
         }
     }
@@ -293,6 +295,16 @@ const StoreContextProvider = (props) => {
         }
     };
 
+    const loadWishlistData = async (currentToken) => {
+        try {
+            const response = await axios.post(url + "/api/wishlist/get", {}, { headers: { token: currentToken } });
+            setWishlistItems(response.data.wishlistData || {});
+        } catch (error) {
+            console.error("Error loading wishlist:", error);
+            toast.error("Failed to load wishlist.");
+        }
+    }
+
     useEffect(() => {
         updateMobileCardPrice();
         updateLaptopCardPrice();
@@ -306,11 +318,6 @@ const StoreContextProvider = (props) => {
         // console.log("Price Data:", response.data.data);
         // when we hit this API we get all price info
         setProductPriceInfo(response.data.data)
-    }
-    
-    const loadWishlistData = async (token) => {
-        const response = await axios.post(url+"/api/wishlist/get",{},{headers:{token}})
-        setWishlistItems(response.data.wishlistData)
     }
 
     // Reset function to clear selections
@@ -337,6 +344,15 @@ const StoreContextProvider = (props) => {
         }
         loadData(); 
     },[])
+
+    // Automatically reload wishlist when token changes
+    useEffect(() => {
+        if (token) {
+            loadWishlistData(token);
+        } else {
+            setWishlistItems({});
+        }
+    }, [token]);
 
     // This has data for which modal is shown
     const selected_Product_for_which_price_is_rendered_in_modal = product_priceinfo.find((product) => {

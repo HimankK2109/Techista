@@ -3,10 +3,11 @@ import React, { useContext, useState } from 'react'
 import { assets } from '../../assets/assests.js'
 import { Link, useLocation, NavLink, useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../context/StoreContext.jsx'
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { token, setToken } = useContext(StoreContext)
+  const { token, setToken, setWishlistItems } = useContext(StoreContext)
 
   const location = useLocation();
   const isCategoriesActive = location.pathname.startsWith('/categories');
@@ -20,7 +21,9 @@ const Navbar = () => {
   const logout = () => {
     localStorage.removeItem("token");
     setToken("");
+    setWishlistItems({});
     navigate("/");
+    toast.success("Logged out successfully.");
   }
 
   return (
